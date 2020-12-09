@@ -15,7 +15,7 @@
  * To make the second one happen, the number to change
  * is the first argument to `repeat`, currently set at 10.
  */
-const gridWidth = 10;
+const gridWidth = 50;
 let count = 0;
 while (count <= gridWidth * gridWidth) {
   const canvas = document.querySelector('.canvas');
@@ -100,10 +100,19 @@ colorThree.addEventListener('click', thirdColor);
 colorFour.addEventListener('click', fourthColor);
 colorFive.addEventListener('click', fifthColor);
 
-for(const square of squares){
-  square.addEventListener('click', colorBox);
-}
 
+// let mouseHandler = false;
+
+// const clickMouse = () => {
+  for(const square of squares){
+    square.addEventListener('click', colorBox);
+  }
+  for(const square of squares){
+    square.addEventListener('mouseenter', colorBox);
+  }
+// }
+
+// mouseHandler.addEventListener('mouseup', clickMouse);
 // Now add some functions to handle clicking one particular square
 // and clicking one particular palette color. You can leave them
 // empty at first, though a console.log just to know they're being
