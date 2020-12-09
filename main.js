@@ -51,37 +51,43 @@ const colorThree = document.querySelector('.color-3');
 const colorFour = document.querySelector('.color-4');
 const colorFive = document.querySelector('.color-5');
 
+const square = document.querySelectorAll('.square');
+
 const currentBrush = document.querySelector('.current-brush');
 
 const firstColor = () => {
-  let input = document.querySelector('.current-brush').classList
-  currentBrush.classList.remove(input[1])
-  currentBrush.classList.add('color-1')
+  let input = document.querySelector('.current-brush').classList;
+  currentBrush.classList.remove(input[1]);
+  currentBrush.classList.add('color-1');
 }
 const secondColor = () => {
-  let input = document.querySelector('.current-brush').classList
-  currentBrush.classList.remove(input[1])
-  currentBrush.classList.add('color-2')
+  let input = document.querySelector('.current-brush').classList;
+  currentBrush.classList.remove(input[1]);
+  currentBrush.classList.add('color-2');
 }
 const thirdColor = () => {
-  let input = document.querySelector('.current-brush').classList
-  currentBrush.classList.remove(input[1])
-  currentBrush.classList.add('color-3')
+  let input = document.querySelector('.current-brush').classList;
+  currentBrush.classList.remove(input[1]);
+  currentBrush.classList.add('color-3');
 }
 const fourthColor = () => {
-  let input = document.querySelector('.current-brush').classList
-  currentBrush.classList.remove(input[1])
-  currentBrush.classList.add('color-4')
+  let input = document.querySelector('.current-brush').classList;
+  currentBrush.classList.remove(input[1]);
+  currentBrush.classList.add('color-4');
 }
 const fifthColor = () => {
-  let input = document.querySelector('.current-brush').classList
-  currentBrush.classList.remove(input[1])
-  currentBrush.classList.add('color-5')
+  let input = document.querySelector('.current-brush').classList;
+  currentBrush.classList.remove(input[1]);
+  currentBrush.classList.add('color-5');
 }
-
 // Add queries for all your squares, palette colors, and brush here.
 // (Note the singular or plural used in that sentence!)
-
+const colorBox = () => {
+  let input = document.querySelectorAll('.square').classList;
+  console.log(input[1]);
+  square.classList.remove(input[1]);
+  square.classList.add(currentBrush);
+}
 
 
 /****************************
@@ -93,6 +99,8 @@ colorTwo.addEventListener('click', secondColor);
 colorThree.addEventListener('click', thirdColor);
 colorFour.addEventListener('click', fourthColor);
 colorFive.addEventListener('click', fifthColor);
+
+square.addEventListener('click', colorBox);
 
 // Now add some functions to handle clicking one particular square
 // and clicking one particular palette color. You can leave them
