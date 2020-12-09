@@ -82,13 +82,13 @@ const fifthColor = () => {
 }
 // Add queries for all your squares, palette colors, and brush here.
 // (Note the singular or plural used in that sentence!)
-const colorBox = (input) => {
-  // let input = squares.classList;
-  console.log(input);
-  input.remove(input);
-  input.add(currentBrush);
+const colorBox = (event) => {
+  let input = event.target.classList;
+  console.log(event.target.classList)
+  input.remove(input[1]);
+  input.add(currentBrush.classList[1]);
 }
-console.log(squares)
+// console.log(squares)
 
 /****************************
  * EVENT LISTENER FUNCTIONS *
